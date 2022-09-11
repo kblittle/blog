@@ -1,0 +1,2 @@
+# blog
+Something worth recording.
