@@ -15,9 +15,14 @@
 &emsp;查看是否安装成功
 
 ## conda安装
-&emsp;python是深度学习中常用的一种计算机语言，在实际算法中会调用到很多不同版本的包。[conda](https://www.anaconda.com/)是一个简单易用的python环境管理软件，其安装较简单。
+&emsp;python是深度学习中常用的一种计算机语言，在实际算法中会调用到很多不同版本的包。[conda](https://www.anaconda.com/)是一个简单易用的python环境管理软件，其安装较简单。安装时建议把添加环境变量到系统勾选上。![添加环境变量到系统](https://raw.githubusercontent.com/kblittle/blog/main/img/condasetup-1-20220911.png)
+&emsp;安装成功之后，需要将源修改为国内的源。在windows搜索栏中打开Anaconda Powershell Prompt，在终端里输入```conda config --set show_channel_urls yes```，生成.condarc文件，生成的文件放在 C:\Users\xxx(用户名)。之后打开该文件，添加[清华源](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)。
 
-参考：
+## pytorch安装
+&emsp;python是深度学习中常用的一种计算机语言，在实际算法中会调用到很多不同版本的包。[conda](https://www.anaconda.com/)是一个简单易用的python环境管理软件，其安装较简单。安装时建议把添加环境变量到系统勾选上。![添加环境变量到系统](https://raw.githubusercontent.com/kblittle/blog/main/img/condasetup-1-20220911.png)
+&emsp;安装成功之后，需要将源修改为国内的源。在windows搜索栏中打开Anaconda Powershell Prompt，在终端里输入```conda config --set show_channel_urls yes```，生成.condarc文件，生成的文件放在 C:\Users\xxx(用户名)。之后打开该文件，添加[清华源](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)。
+
+# 参考：
 [1]https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#install-windows
 [2]https://blog.csdn.net/m0_37605642/article/details/98854753
 
