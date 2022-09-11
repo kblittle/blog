@@ -20,8 +20,17 @@
 
 ## pytorch安装
 &emsp;[pytorch](https://pytorch.org/get-started/locally/)是深度学习中常用的一个开发框架，本文使用conda安装。最新版本的pytorch安装如下图。![pytorch安装](https://raw.githubusercontent.com/kblittle/blog/main/img/pytorch-1-20220911.png)
-&emsp;本文以pytorch1.7.0，cuda11.6为例。pytorch的[历史版本](https://pytorch.org/get-started/previous-versions/)中可以找到相应的安装命令。首先打开Anaconda Powershell Prompt，在终端里创建一个新的环境
-&emsp;安装成功之后，需要将源修改为国内的源。在windows搜索栏中打开Anaconda Powershell Prompt，在终端里输入```conda config --set show_channel_urls yes```，生成.condarc文件，生成的文件放在 C:\Users\xxx(用户名)。之后打开该文件，添加[清华源](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)。
+&emsp;本文以pytorch1.7.0，cuda11.6为例。pytorch的[历史版本](https://pytorch.org/get-started/previous-versions/)中可以找到相应的安装命令。首先打开Anaconda Powershell Prompt，在终端里创建一个新的python环境,如下图所示；```conda create -n py37 python=3.7```![创建环境](https://raw.githubusercontent.com/kblittle/blog/main/img/python-env-1-20220911.png)之后激活环境,如下图所示；```conda activate py37```![激活环境](https://raw.githubusercontent.com/kblittle/blog/main/img/python-env-activate-1-20220911.png)在该环境中安装pytorch,如下图所示；
+```conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0 -c pytorch```![创建环境](https://raw.githubusercontent.com/kblittle/blog/main/img/pytorch-python-install-1-20220911.png)
+安装成功之后，进行验证，如下图所示
+
+    python
+    import torch
+    torch.cuda.is_available()
+![验证](https://raw.githubusercontent.com/kblittle/blog/main/img/pytorch-python-verification-1-20220911.png)
+
+
+
 
 # 参考：
 [1]https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#install-windows
